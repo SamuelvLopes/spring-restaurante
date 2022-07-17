@@ -1,4 +1,4 @@
-package br.com.pratics.dudulanches.models;
+package br.com.pratics.dudulanches.models.ententies;
 
 public class Cliente {
 
