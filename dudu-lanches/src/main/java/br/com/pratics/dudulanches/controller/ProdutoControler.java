@@ -47,7 +47,6 @@ public class ProdutoControler {
 		return produtoRepo.findById(id);
 
 	}
-
 	
 	@DeleteMapping("/{id}")
 	public Boolean deletarproduto(@PathVariable int id) {
@@ -63,7 +62,6 @@ public class ProdutoControler {
 		return false;
 		
 		
-	}
-	
+	}	
 	
 }

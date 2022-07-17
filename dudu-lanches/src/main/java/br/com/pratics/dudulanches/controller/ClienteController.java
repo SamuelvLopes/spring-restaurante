@@ -7,31 +7,28 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.pratics.dudulanches.models.ententies.Cliente;
+
 @RestController
-@RequestMapping(path="/clientes")
+@RequestMapping(path = "/clientes")
 public class ClienteController {
-	
-	@GetMapping(path="/qualquer")
+
+	@GetMapping(path = "/qualquer")
 	public Cliente obterCliente() {
-		
-		return new Cliente(1,"Pedro","123.456.78-90");
-		
+
+		return new Cliente(1, "Pedro", "123.456.78-90");
+
 	}
+
 	@GetMapping("/{id}")
-	public Cliente obterClientePorid(@PathVariable int id){
-		
-		return new Cliente(id,"maria","124.343.122-11");
+	public Cliente obterClientePorid(@PathVariable int id) {
+
+		return new Cliente(id, "maria", "124.343.122-11");
 	}
+
 	@GetMapping
-	public Cliente obterClientePorid2(
-			@RequestParam(name="id",defaultValue="1") int id
-			) {
-		
-		return new Cliente(id,"joao","124.343.122-11");
-		}
-		
-		
-	
-	
+	public Cliente obterClientePorid2(@RequestParam(name = "id", defaultValue = "1") int id) {
+
+		return new Cliente(id, "joao", "124.343.122-11");
+	}
 
 }
