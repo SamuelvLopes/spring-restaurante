@@ -28,9 +28,8 @@ public class Produto {
 	}
 	
 
-	public Produto(int id, @NotBlank String name, @NotBlank String description, @Min(0) double price, int active) {
+	public Produto(@NotBlank String name, @NotBlank String description, @Min(0) double price, int active) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.price = price;

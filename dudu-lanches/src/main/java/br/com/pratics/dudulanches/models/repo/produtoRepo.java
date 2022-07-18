@@ -6,6 +6,4 @@ import br.com.pratics.dudulanches.models.ententies.Produto;
 
 public interface produtoRepo extends CrudRepository<Produto, Integer>{
 
-	
-	
 }

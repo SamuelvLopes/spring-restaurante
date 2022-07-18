@@ -1,41 +1,90 @@
 package br.com.pratics.dudulanches.models.ententies;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+
 public class Cliente {
 
-	private int id;
-	private String nome;
-	private String cpf;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public int id;
 	
-	public Cliente(int id, String nome, String cpf) {
+	@NotBlank
+	public String name;
+	
+	@NotBlank
+	public String phone;
+	
+	@NotBlank
+	public String email;
+	
+	@NotBlank
+	public String password;
+	
+	@Min(0)
+	public int type;
+
+	public Cliente() {
+		
+	}
+	
+	
+	
+	public Cliente(@NotBlank String name, @NotBlank String phone, @NotBlank String email, @NotBlank String password,
+			@Min(0) int type) {
 		super();
-		this.id = id;
-		this.nome = nome;
-		this.cpf = cpf;
+		this.name = name;
+		this.phone = phone;
+		this.email = email;
+		this.password = password;
+		this.type = type;
 	}
 
-	public int getId() {
-		return id;
+
+
+	public String getName() {
+		return name;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getPhone() {
+		return phone;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
-	public String getCpf() {
-		return cpf;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setEmail(String email) {
+		this.email = email;
 	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public int getType() {
+		return type;
+	}
+
+	public void setType(int type) {
+		this.type = type;
+	}
+	
 	
 	
 }
