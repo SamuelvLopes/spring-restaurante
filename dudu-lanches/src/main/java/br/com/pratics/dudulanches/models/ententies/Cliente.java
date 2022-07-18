@@ -1,11 +1,12 @@
 package br.com.pratics.dudulanches.models.ententies;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
-
+@Entity
 public class Cliente {
 
 	@Id
@@ -26,12 +27,9 @@ public class Cliente {
 	
 	@Min(0)
 	public int type;
-
 	public Cliente() {
 		
 	}
-	
-	
 	
 	public Cliente(@NotBlank String name, @NotBlank String phone, @NotBlank String email, @NotBlank String password,
 			@Min(0) int type) {
@@ -42,8 +40,6 @@ public class Cliente {
 		this.password = password;
 		this.type = type;
 	}
-
-
 
 	public String getName() {
 		return name;
@@ -84,7 +80,6 @@ public class Cliente {
 	public void setType(int type) {
 		this.type = type;
 	}
-	
-	
+
 	
 }
