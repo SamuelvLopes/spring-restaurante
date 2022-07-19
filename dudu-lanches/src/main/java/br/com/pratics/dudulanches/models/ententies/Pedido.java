@@ -15,24 +15,30 @@ public class Pedido {
 	
 	public String note;
 
-	public int id_cliente;
+	public int idcliente;
 	public int id_payment_method;
 	public int id_status;
 	public int item;
 	
 	public Pedido(){}
-	
-	
-	public Pedido(Float price, String note, int id_cliente, int id_payment_method, int id_status, int item) {
+
+	public Pedido(Float price, String note, int idcliente, int id_payment_method, int id_status, int item) {
 		super();
 		this.price = price;
 		this.note = note;
-		this.id_cliente = id_cliente;
+		this.idcliente = idcliente;
 		this.id_payment_method = id_payment_method;
 		this.id_status = id_status;
 		this.item = item;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public Float getPrice() {
 		return price;
@@ -50,12 +56,12 @@ public class Pedido {
 		this.note = note;
 	}
 
-	public int getId_cliente() {
-		return id_cliente;
+	public int getIdcliente() {
+		return idcliente;
 	}
 
-	public void setId_cliente(int id_cliente) {
-		this.id_cliente = id_cliente;
+	public void setIdcliente(int idcliente) {
+		this.idcliente = idcliente;
 	}
 
 	public int getId_payment_method() {
@@ -81,6 +87,8 @@ public class Pedido {
 	public void setItem(int item) {
 		this.item = item;
 	}
-
 	
+	
+
+
 }
